@@ -4,6 +4,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Menu</title>
+<iframe src="navi.html" width="650" height="50" target="_parent"></iframe>
+
 	</head>
 	<body>
 		<h1>Menu</h1>
@@ -24,4 +26,9 @@
 			<li><a href="special.html">Weekly Specials</a> - A list of our current weekly specials and signature dishes</li>
 		</ol>
 	</body>
+<footer>
+<iframe src="navi.html" width="650" height="50" target="_parent"></iframe>
+
+</footer>
+
 </html>
