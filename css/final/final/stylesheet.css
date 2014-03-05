@@ -1,0 +1,34 @@
+/*External StyleSheet*/
+a:link {text-decoration: none;}
+a:hover {text-decoration: underline;font-size: 100%; color:orange;}
+
+
+iframe { 
+border-width: 0;
+width: 100%;
+height: 50px;
+
+}
+
+ul {color: red;}
+ul.liststuff {list-style-image: url("chickenIcon.png");}
+ol {list-style-image: url("chickenIcon2.png");}
+
+/*#apDiv {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    height: 10%;
+    width: 8%;
+    background-color: red;
+    border-radius: 20%;
+    }*/
+body {background-color: RGBA(123,321,231, .79);
+	 font-family:"Times New Roman",Georgia,Serif;}
+
+body {
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizelegibility;
+}
+p{font-family:"Lucida Console", Monaco, monospace;
+	color:#00FF00}
