@@ -40,18 +40,24 @@
 			</fieldset>
 			<fieldset>
 			<legend>Survey</legend>
+			<p>
 				<h4> Things you liked:</h4> <br>
 				<div class="checkbox">
+				<label>Site Design
 					<input name = "thingsliked" type = "checkbox" value = "Design">
-				Site Design
+				</label>
+				<label>Links
 					<input name = "thinksliked" type = "checkbox" value = "Links">
-				Links
-				<input name = "thinksliked" type = "checkbox" value = "Ease">
-				Ease of use
+				</label>
+				<label>Ease of use
+					<input name = "thinksliked" type = "checkbox" value = "Ease">
+				</label>
+				<label>Images
 					<input name = "thingsliked" type = "checkbox" value = "Images">
-				Images
+				</label>
+				<label>Source Code
 					<input name = "thingsliked" type = "checkbox" value = "Code">
-				Source Code
+				</label>
 				</div>
 				<h4>How did you find site?:</h4> <br>
 				<div class="radio">
