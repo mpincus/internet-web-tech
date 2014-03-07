@@ -3,15 +3,27 @@ a:link {text-decoration: none;}
 a:hover {text-decoration: underline;font-size: 100%; color:orange;}
 
 
+/* zach's shit */
+fieldset {
+  border: 1px solid #CCA383;
+  width: 800px;
+  background: #000000;
+  display: block;
+  margin: 0 auto 25px;
+}
+.row { font-family: "Lucida Console", Monaca, monospace; color: #00ff00; margin-bottom: 10px; }
+.row label { display: inline-block; text-align: left; width: 200px; }
+.row input, .row textarea { display: inline-block; width: 582px; }
+.buttonarea { text-align: right; }
+/***************/
+
 iframe { 
 border-width: 0;
 width: 85%;
 height: 50px;
 display: block;
 margin: 0 auto;
-/*border-radius:5px 20px 5px;*/
-border-radius:100%;
-border-style:solid;
+border-radius:9000%;
 
 }
 
@@ -24,18 +36,15 @@ ol {list-style-image: url("chickenIcon2.png");}
 body {background-color: RGBA(0,0,0, .9);
 	 font-family:"Times New Roman",Georgia,Serif;}
 
-html {
+body {
 -webkit-font-smoothing: antialiased;
-/*-moz-backgroud-clip:padding;
-background-clip: padding-box;*/
 text-rendering: optimizelegibility;
-margin-left:10px;
-margin-right:10px;
 }
 p{font-family:"Lucida Console", Monaco, monospace;
 	color:#00FF00;
 	text-align:center;}
 p.copy{font-size:60%;}
+
 h1{font-family:"Lucida Console", Monaco, monospace;
 	color:#00FF00;
 	text-align: center;}
@@ -48,35 +57,12 @@ table{font-family:"Lucida Console", Monaco, monospace;
 	color:#00FF00;
 	text-align:center;
 	margin:auto}
-legend{color:#00FF00;}
-fieldset {
-	border: 1px solid #CCA383;
-	width: 800px;
-	background: #000000;
-	padding: 3px;
-	padding-bottom:20px;
-	display:block;
-	margin:auto;
-}
+
 fieldset legend {
 	background: #000000;
 	padding: 6px;
 	font-weight: bold;
-}
-fieldset label {
-	color: #00FF00;
-	display:block;
-	
-	width: 150px;
-	float: left;
-}
-fieldset textarea {
-	display: block;
-	width: 238px;
-	float: left;
-	margin-left:203px;
-/*	padding-left:50px;*/
-	text-align:left;
+	color:#00FF00;
 }
 
 fieldset strong {
