@@ -9,7 +9,9 @@ width: 85%;
 height: 50px;
 display: block;
 margin: 0 auto;
-border-radius:9000%;
+/*border-radius:5px 20px 5px;*/
+border-radius:100%;
+border-style:solid;
 
 }
 
@@ -22,9 +24,13 @@ ol {list-style-image: url("chickenIcon2.png");}
 body {background-color: RGBA(0,0,0, .9);
 	 font-family:"Times New Roman",Georgia,Serif;}
 
-body {
+html {
 -webkit-font-smoothing: antialiased;
+/*-moz-backgroud-clip:padding;
+background-clip: padding-box;*/
 text-rendering: optimizelegibility;
+margin-left:10px;
+margin-right:10px;
 }
 p{font-family:"Lucida Console", Monaco, monospace;
 	color:#00FF00;
@@ -59,7 +65,8 @@ fieldset legend {
 }
 fieldset label {
 	color: #00FF00;
-	display: block;
+	display:block;
+	
 	width: 150px;
 	float: left;
 }
@@ -103,3 +110,10 @@ fieldset strong {
 	text-align:center;
 	float:center;
 	}
+.ddatalist{
+	display:inline-block;
+	clear:none;
+	float:center;
+	text-align:center;
+	margin:auto;
+}
