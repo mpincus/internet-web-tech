@@ -108,7 +108,7 @@ hr {width:82%; height:5px; color:red; background-color:orange;
 #logo {
 position:relative;
 animation-name:myfirst;
-animation-duration:3s;
+animation-duration:.0000001s;
 animation-timing-function:linear;
 animation-delay:0s;
 animation-iteration-count:infinite;
@@ -116,7 +116,7 @@ animation-direction:alternate;
 animation-play-state:running;
 /* Safari and Chrome: */
 -webkit-animation-name:myfirst;
--webkit-animation-duration:2s;
+-webkit-animation-duration:.5s;
 -webkit-animation-timing-function:linear;
 -webkit-animation-delay:2s;
 -webkit-animation-iteration-count:infinite;
