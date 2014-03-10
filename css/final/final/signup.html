@@ -2,28 +2,46 @@
 <!--signup-->
 <html>
 	<head>
+		<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
 		<meta charset="utf-8">
 		<title>signup</title>
-<link rel = "stylesheet" type = "text/css" href = "stylesheet.css">
-
-<iframe src="navi.html" target="_parent"></iframe>
-<div id="apDiv"></div>
+		<link rel = "stylesheet" type = "text/css" href = "stylesheet.css">
 	</head>
 	<body>
-	<h1>Signup Page</h1>
-	<form name="register">
-		Username<input type="text" name="userid"/><br>
-		Password<input type="password" name="pswrd"/><br>
-		Confirm Password<input type="password" name="cpswrd"/><br>
-		Email<input type="email" name="email"/><br>
-		
-		<input type="button" value="Register"/>
-		<input type="reset" value="Cancel"/>
-</form>
+                <a href="index.html" id="logo"> </a> 
+                <h1>Welcome to Richard Teabag's House of Cocks: Family-Style Restaurant</h1>
+                <h2>Meatballs for your mouth since 1995</h2>
+		<iframe src="navi.html" target="_parent"></iframe>
+		<h1>Signup Page</h1>
+		<hr>
+		<fieldset>
+			<legend>SignUp</legend>
+				<form name="register">
+				<div class="row">
+					<label>Username</label>
+					<input type="text" name="userid"/>
+				</div>
+				<div class="row">
+					<label>Password</label>
+					<input type="password" name="pswrd"/>
+				</div>
+				<div class="row">
+					<label>	Confirm Password</label>
+					<input type="password" name="cpswrd"/>
+				</div>
+				<div class="row">
+					<label>	Email</label>
+					<input type="email" name="email"/>
+				</div>
+				<div class="buttonarea">		
+					<input type="button" value="Register"/>
+					<input type="reset" value="Cancel"/>
+				</div>
+			</form>
+		</fieldset>
 	</body>
-<footer>
-<iframe src="navi.html" target="_parent"></iframe>
-<p class="copy">&copy; copywrite</p>
-
-</footer>
+	<footer>
+		<iframe src="navi.html" target="_parent"></iframe>
+		<p class="copy">&copy; copywrite</p>
+	</footer>
 </html>
