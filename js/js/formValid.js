@@ -35,13 +35,13 @@ function validateDate(){
 		alert("This day has passed");
 		return false;
 	}
-	if(document.forms[0]["ampm"].text == "AM"){
+	if(document.getElementById('ampm').options[document.getElementById('ampm').selectedIndex].text == "AM"){
 		if(parseInt(document.forms[0]["time"].value) <= currentDate.getHours()){
 			alert("this time has passed");
 			return false;
 		}
 	}
-	if(document.forms[0]["ampm"].text == "PM"){
+	if(document.getElementById('ampm').options[document.getElementById('ampm').selectedIndex].text == "PM"){
 		if(parseInt(document.forms[0]["time"].value + 12) <= currentDate.getHours()){
 			alert("this time has passed");
 			return false;
