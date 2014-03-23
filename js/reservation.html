@@ -6,6 +6,9 @@
 		<meta charset="utf-8">
 		<title>Reservation</title>
 		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		<div class="emailCheck">
+			<script src = "js/formValid.js"></script>
+		</div>
 	</head>
 	<body>
                 <a href="index.html" id="logo"> </a> 
@@ -17,7 +20,7 @@
 		<p>To place a reservation fill out the form below.</p>
 		<fieldset>
 			<legend>Reservation</legend>
-			<form method="post" action="/" autocomplete="on">
+			<form method="post" action="/" autocomplete="on" onSubmit="return validateForm();">
 				<div class="row">
 					<label>Name:</label>
 					<input name="name" type="text" size="25" maxlength="30" id="username" placeholder="User Name" required="true">
@@ -31,8 +34,12 @@
 					<textarea name="comments" rows="4" cols="36"></textarea>
 				</div>
 				<div class="row">
+					<label for="txtyear">Year:</label>
+					<input type ="text" id="year" placeholder="Select a year" required="true" />
+				</div>
+				<div class="row">
 					<label for="txtlist">Months:</label>
-					<input type="text" id="txtlist" placeholder="Select a month" list="months" required="true" />
+					<input type="text" name="months" id="txtlist" placeholder="Select a month" list="months" required="true" />
 					<datalist id="months">
 						<option value="January">
 						<option value="February">
@@ -50,7 +57,7 @@
 				</div>
 				<div class="row">
 					<label for="txtnum">Days:</label>
-					<input type="text" id="txtnum" placeholder="Select a day" list="day" required="true" />
+					<input type="text" name="day" id="txtnum" placeholder="Select a day" list="day" required="true" />
 					<datalist id="day">
 						<option value="1">
 						<option value="2">
@@ -86,9 +93,16 @@
 					</datalist>
 				</div>
 				<div class="row">
-					<label for="txttime">Time:</label>
-					<input type ="txttime" id="time" placeholder="Select a time" required="true" />
+					<div class="time">
+						<label for="txttime">Time:</label>
+						<input type ="text" name = "time" id="time" placeholder="Select a time" required="true" />
+					<select name = "ampm">
+						<option selected> AM</option>
+						<option>PM</option>
+					</select>
+					</div>
 				</div>
+
 				<div class="row">
 					<label for="tele">Telephone Number:</label>
 					<input type='tel' pattern='[\(]??\d{3}[\)]??\d{3}[\-]??\s*\d{4}' placeholder="Phone Number (Format: (999)999-9999)"> 
