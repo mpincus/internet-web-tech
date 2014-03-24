@@ -6,6 +6,7 @@
 		<meta charset="utf-8">
 		<title>signup</title>
 		<link rel = "stylesheet" type = "text/css" href = "css/stylesheet.css">
+		<script src="js/signin.js"></script>
 	</head>
 	<body>
                 <a href="index.html" id="logo"> </a> 
@@ -16,14 +17,14 @@
 		<hr>
 		<fieldset>
 			<legend>SignUp</legend>
-				<form name="register">
+				<form name="register" id="register" onSubmit="return signupMsg();">
 				<div class="row">
 					<label>Username</label>
-					<input type="text" name="userid"/>
+					<input type="text" name="userid" id="userid"/>
 				</div>
 				<div class="row">
 					<label>Password</label>
-					<input type="password" name="pswrd"/>
+					<input type="password" name="pswrd" required="true" pattern="^(?:^(?:[a-zA-Z]|\d)|^(?:\!|@|#|\$|%|\^|&|\*|\(|\))+){6,20}"/>
 				</div>
 				<div class="row">
 					<label>	Confirm Password</label>
@@ -34,8 +35,8 @@
 					<input type="email" name="email"/>
 				</div>
 				<div class="buttonarea">		
-					<input type="button" value="Register"/>
-					<input type="reset" value="Cancel"/>
+					<input type="submit" value="Register"/>
+					<input type="reset" value="Cancel" onClick="return confirm('Are you sure?');"/>
 				</div>
 			</form>
 		</fieldset>

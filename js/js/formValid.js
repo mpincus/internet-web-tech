@@ -3,6 +3,7 @@ function validateForm(){
 		validateEmail();
 	if((document.forms[0].months)  && (document.forms[0].day))
 		validateDate();
+	rc();
 }
 function validateEmail()
 {
@@ -47,4 +48,24 @@ function validateDate(){
 			return false;
 		}
 	}
+}
+function rc(){
+	var bak = document.getElementById('rForm').innerHTML;
+	var year = document.getElementById('year').value;
+	var month = document.getElementById('months').value;
+	var day = document.getElementById('day').value;
+	var time = document.getElementById('time').value;
+	var ampm = document.getElementById('ampm').options[document.getElementById('ampm').selectedIndex].text;
+	localStorage.setItem("month", month);
+	localStorage.setItem("year", year);
+	localStorage.setItem("day", day);
+	localStorage.setItem("time",time);
+	localStorage.setItem("ampm",ampm);
+	var str = "<h2>Your reservation has been set for:</h2><br><p>"+localStorage.getItem("month")+" "+localStorage.getItem("day")+" "+localStorage.getItem("year")+" at "+localStorage.getItem("time")+localStorage.getItem("ampm")+"</p><input type='button' id='okb' value = 'OK' onClick='restore(bak)'/>";
+	document.getElementById('rForm').innerHTML=str;
+
+}
+function restore(bak){
+		document.getElementById('rForm').innerHTML=bak;
+	
 }

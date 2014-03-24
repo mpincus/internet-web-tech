@@ -9,12 +9,15 @@
 		<link rel = "stylesheet" type = "text/css" href = "css/stylesheet.css">
 		<div class="quotes">
 			<script src = "js/randQuote.js"></script>
+			<script src = "js/signin.js"></script>
 		</div>
 	</head>
-	<body>
+	<body onload="javascript:loggedInMsg()">
 		<a href="index.html" id="logo"> </a>
 		<h1>Welcome to Richard Teabag's House of Cocks: Family-Style Restaurant</h1>
 		<h2>Meatballs for your mouth since 1995</h2>
+		<div id="userMsg">
+		</div>
 		<iframe src="navi.html" target="_parent"></iframe>
 
 		<p>Teabags is credited with serving the finest chicken and man-sized meatballs anywhere.<br>

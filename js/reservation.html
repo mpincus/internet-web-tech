@@ -20,7 +20,7 @@
 		<p>To place a reservation fill out the form below.</p>
 		<fieldset>
 			<legend>Reservation</legend>
-			<form method="post" action="/" autocomplete="on" onSubmit="return validateForm();">
+			<form id="rForm" method="post" action="/" autocomplete="on" onSubmit="return validateForm();">
 				<div class="row">
 					<label>Name:</label>
 					<input name="name" type="text" size="25" maxlength="30" id="username" placeholder="User Name" required="true">
@@ -39,7 +39,7 @@
 				</div>
 				<div class="row">
 					<label for="txtlist">Months:</label>
-					<input type="text" name="months" id="txtlist" placeholder="Select a month" list="months" required="true" />
+					<input type="text" name="months" id="months" placeholder="Select a month" list="months" required="true" />
 					<datalist id="months">
 						<option value="January">
 						<option value="February">
@@ -57,7 +57,7 @@
 				</div>
 				<div class="row">
 					<label for="txtnum">Days:</label>
-					<input type="text" name="day" id="txtnum" placeholder="Select a day" list="day" required="true" />
+					<input type="text" name="day" id="day" placeholder="Select a day" list="day" required="true" />
 					<datalist id="day">
 						<option value="1">
 						<option value="2">
@@ -115,7 +115,7 @@
 				</div>
 			</form>
 		</fieldset>
-	</body>
+		</body>
 	<footer>
 		<iframe src="navi.html" target="_parent"></iframe>
 		<p class="copy">&copy; copywrite</p>

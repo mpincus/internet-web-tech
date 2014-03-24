@@ -41,7 +41,7 @@ ol {list-style-image: url("../img/chickenIcon2.png");}
 body {background-color: RGBA(0,0,0, .9);
 	 font-family: 'Berkshire Swash', cursive;;}
 
-p{font-family: 'Berkshire Swash', cursive;;
+p{font-family: 'Berkshire Swash', cursive;
 	color:#00FF00;
 	text-align:center;}
 p.copy{font-size:60%;}
@@ -107,9 +107,9 @@ hr {width:82%; height:5px; color:red; background-color:orange;
     font-size: 75%
 }
 #logo { width: 90px; height: 100px; background-image:url("../img/logo.png");float:left;background-repeat:no-repeat;}
-.top{position:absolute;left:4%;top:63%;width:100px;height:95px;background-image:url("../img/chickenIcon2.png");background-repeat:no-repeat;z-index:3;}
-.middle{position:absolute;left:5%;top:70%;width:100px;height:100px;background-image:url("../img/meatballs.png");background-repeat:no-repeat;z-index:2;}
-.bottom{position:absolute;width:200px;height:200px;background-image:url("../img/plate.png");background-repeat:no-repeat;z-index:1;}
+.top{position:absolute;left:4%;top:45%;width:100px;height:95px;background-image:url("../img/chickenIcon2.png");background-repeat:no-repeat;z-index:3;}
+.middle{position:absolute;left:5%;top:55%;width:100px;height:100px;background-image:url("../img/meatballs.png");background-repeat:no-repeat;z-index:2;}
+.bottom{position:absolute;top:40%;width:200px;height:200px;background-image:url("../img/plate.png");background-repeat:no-repeat;z-index:1;}
 
 #logo {
 position:relative;
@@ -166,3 +166,6 @@ animation-play-state:running;
 #melting img.chik:hover{
 	opacity:0;
 }
+#userMsg p{
+	color:orange;
+	}
