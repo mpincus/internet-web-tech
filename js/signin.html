@@ -6,6 +6,7 @@
 		<meta charset="utf-8">
 		<title>signin</title>
 		<link rel = "stylesheet" type = "text/css" href = "css/stylesheet.css">
+		<script src="js/signin.js"></script>
 		
 	</head>
 	<body>
@@ -20,14 +21,14 @@
                 <div class="bottom"></div>
 		<fieldset>
 			<legend>Login</legend>
-				<form name="login" >
+				<form name="login" id="login" onSubmit="return signupMsg();" >
 				<div class="row">
 					<label>Username</label>
-					<input type="text" name="userid" id="userid"/>
+					<input type="text" name="userid" id="userid" required="true"/>
 				</div>
 				<div class="row">
 					<label>Password</label>
-					<input type="password" name="pswrd"/>
+					<input type="password" name="pswrd">
 				</div>
 				<div class="buttonarea">
 					<input type="submit"  value="Login" />

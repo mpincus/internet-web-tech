@@ -20,7 +20,7 @@
 				<form name="register" id="register" onSubmit="return signupMsg();">
 				<div class="row">
 					<label>Username</label>
-					<input type="text" name="userid" id="userid"/>
+					<input type="text" name="userid" id="userid" required="true"/>
 				</div>
 				<div class="row">
 					<label>Password</label>
@@ -28,11 +28,11 @@
 				</div>
 				<div class="row">
 					<label>	Confirm Password</label>
-					<input type="password" name="cpswrd"/>
+					<input type="password" name="cpswrd" required="true"/>
 				</div>
 				<div class="row">
 					<label>	Email</label>
-					<input type="email" name="email"/>
+					<input type="email" name="email" required="true"/>
 				</div>
 				<div class="buttonarea">		
 					<input type="submit" value="Register"/>

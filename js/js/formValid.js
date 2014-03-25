@@ -50,7 +50,7 @@ function validateDate(){
 	}
 }
 function rc(){
-	var bak = document.getElementById('rForm').innerHTML;
+	bak = document.getElementById('rForm').innerHTML;
 	var year = document.getElementById('year').value;
 	var month = document.getElementById('months').value;
 	var day = document.getElementById('day').value;
@@ -67,5 +67,4 @@ function rc(){
 }
 function restore(bak){
 		document.getElementById('rForm').innerHTML=bak;
-	
 }

@@ -6,4 +6,3 @@ function loggedInMsg(){
 	var str = '<p>Welcome Back ' + localStorage.getItem('username')+'</p>';
 	document.getElementById('userMsg').innerHTML=str;
 }
-//window.onload = loggedInMsg;
