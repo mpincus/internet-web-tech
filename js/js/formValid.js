@@ -67,4 +67,4 @@ function rc(){
 }
 function restore(bak){
 		document.getElementById('rForm').innerHTML=bak;
-}
+} 
