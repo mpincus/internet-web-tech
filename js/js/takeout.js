@@ -50,7 +50,7 @@ function orderConfirm(checked){
 	}
 	for(var i = 0; i < checked.length; i++){
 		str2 += "<div class='row'><label>" + checked[i].id + "</label><input type='text' style='background-color:#000000;' disabled='disabled' value='$" + localStorage.getItem(checked[i].id) + "'/></div><br>";
-	}
+	} 
 	for(var i=0;i<checked.length;i++){
 		total += parseFloat(localStorage.getItem(checked[i].id));
 	}
