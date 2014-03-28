@@ -20,7 +20,7 @@ fieldset {
 }
 .row{ font-family: "Lucida Console", Monaca, monospace; color: #00ff00; margin-bottom: 10px; }
 .row label { display:inline-block; text-align: left; width: 200px; }
-.row input, .row textarea { display: inline-block; width: 582px; }
+.row input, .row textarea, #months { display: inline-block; width: 582px; }
 .buttonarea { text-align: right; }
 .time input{width:450px;}
 iframe { 

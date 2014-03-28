@@ -3,7 +3,7 @@ function validateForm() {
         validateEmail();
     if ((document.forms[0].months) && (document.forms[0].day))
         validateDate();
-    rc();
+
 }
 function validateEmail() {
     var x = document.forms[0]["email"].value;
@@ -18,36 +18,49 @@ function validateDate() {
     var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
     var currentDate = new Date();
     var inputMonth = 0;
+	    for (var i = 0; i < 12; i++) {
+        if (document.forms[0]["months"].value == monthNames[i])
+            inputMonth = i;
+    }
     if (document.forms[0]["year"].value < currentDate.getFullYear()) {
         alert("this year has passed");
         return false;
     }
-
-    for (var i = 0; i < 12; i++) {
-        if (document.forms[0]["months"].value == monthNames[i])
-            inputMonth = i;
-    }
-    if ((document.forms[0]["year"].value == currentDate.getFullYear()) && (inputMonth < currentDate.getMonth())) {
+    else if ((document.forms[0]["year"].value == currentDate.getFullYear()) && (inputMonth < currentDate.getMonth())) {
         alert("This month has passed");
         return false;
     }
-    if ((inputMonth == currentDate.getMonth()) && (parseInt(document.forms[0]["day"].value) < currentDate.getDate())) {
+    else if ((inputMonth == currentDate.getMonth()) && (parseInt(document.forms[0]["day"].value) < currentDate.getDate())) {
         alert("This day has passed");
         return false;
     }
-    if (document.getElementById('ampm').options[document.getElementById('ampm').selectedIndex].text == "AM") {
+    else if (document.getElementById('ampm').options[document.getElementById('ampm').selectedIndex].text == "AM") {
         if (parseInt(document.forms[0]["time"].value) <= currentDate.getHours()) {
             alert("this time has passed");
             return false;
         }
+		else if(parseInt(document.forms[0]["time"].value) > 12){
+			alert("fuck off stop breaking my code");
+			return false;
+		}
+		else
+			return true;
     }
 
-    if (document.getElementById('ampm').options[document.getElementById('ampm').selectedIndex].text == "PM") {
+    else if (document.getElementById('ampm').options[document.getElementById('ampm').selectedIndex].text == "PM") {
         if (parseInt(document.forms[0]["time"].value + 12) <= currentDate.getHours()) {
             alert("this time has passed");
             return false;
         }
+		else if(parseInt(document.forms[0]["time"].value) > 12){
+			alert("fuck off stop breaking my code");
+			return false;
+		}
+		else
+			return true;
     }
+	else 
+		rc();
 
 
 }
