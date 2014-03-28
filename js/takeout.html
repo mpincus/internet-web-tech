@@ -104,10 +104,32 @@ width="100"></td>
 			</tfoot>
 		</table>
 		<br>
-						<div class="buttonarea">
-					<input type="submit" value="Submit" />
-					<input type="reset" value="Clear" onClick="return confirm('Are you sure?');" />
-				</div>
+			<div class="row">
+				<label>Name:</label>
+				<input name = "name" id="name" type = "text" size = "25" maxlength = "30"required="true"/>
+			</div>		
+			<div class="row">
+					<label for="tele">Telephone Number:</label>
+					<input type='tel' id="tel" required="true" pattern='[\(]??\d{3}[\)]??\d{3}[\-]??\s*\d{4}' placeholder="Phone Number (Format: (999)999-9999)"> 
+			</div>
+			<div class="row">
+				<label>Address:</label>
+				<input name = "address" id="address" type = "text" size = "25" maxlength = "30" required="true"/>
+			</div>
+			<div class="row">
+				<label>Town:</label>
+				<input name = "town" id="town" required="true" type = "text" size = "25" maxlength = "30"/>
+			</div>		
+			<div class="row">	
+				<label>Comments:</label>
+				<textarea name = "comments" id="comments" 
+					rows = "4" cols = "36">Enter Comments Here.</textarea>
+			</div>
+<br>			
+		<div class="buttonarea">
+		<input type="submit" value="Submit" />
+		<input type="reset" value="Clear" onClick="return confirm('Are you sure?');" />
+		</div>
 					</form>
 		</fieldset>
 		<!-- Empty space for internal linking -->

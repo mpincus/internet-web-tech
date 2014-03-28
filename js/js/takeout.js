@@ -38,18 +38,25 @@ function orderConfirm(checked){
    	bak = document.getElementById('tForm').innerHTML;
 	var str = "<h2>This is the order you have selected.</h2><br>";
 	var str2 = "" ;
-	var tax = 1;
-	var deliv = 900;
-	var seperator = "<p>----------------------------------------------</p>";
+	var str3="";
+	var str4="";
+	var str5="";
+	var tax = 1.00;
+	var deliv = 900.00;
 	var total = 0;
+	str4="<div class='row'><label>Name</label><input type='text'  disabled='disabled' value='" +document.forms[0]["name"].value+"'/></div><br>"+"<div class='row'><label>Telephone Number</label><input type='text'  disabled='disabled' value='" +document.forms[0]["tele"].value+"'/></div><br>"+"<div class='row'><label>Address</label><input type='text'  disabled='disabled' value='" +document.forms[0]["address"].value+"'/></div><br>"+"<div class='row'><label>Town</label><input type='text'  disabled='disabled' value='" +document.forms[0]["town"].value+"'/></div><br>";
+	if(document.forms[0]["comments"].value) != null){
+		str5= "<div class='row'><label>Comments</label><textarea  disabled='disabled' value='" +document.forms[0]["comments"].value+"'/></div><br>";
+	}
 	for(var i = 0; i < checked.length; i++){
 		str2 += "<div class='row'><label>" + checked[i].id + "</label><input type='text' style='background-color:#000000;' disabled='disabled' value='$" + localStorage.getItem(checked[i].id) + "'/></div><br>";
 	}
 	for(var i=0;i<checked.length;i++){
 		total += parseFloat(localStorage.getItem(checked[i].id));
 	}
-    console.log("total "+total);
 	total += (tax + deliv);
-	var combine = str + str2 + seperator + tax + deliv + seperator + total;
+	str3="<div class='row'><label>Tax</label><input type='text'  disabled='disabled' value='$" + tax+"'/></div><br>"+"<div class='row'><label>Delivary</label><input type='text'  disabled='disabled' value='$" + deliv+"'/></div><br>"+"<div class='row'><label>Total</label><input type='text'  disabled='disabled' value='$" + total+"'/></div><br>";
+	
+	var combine = str + str2 + "<hr%><br>" + str3 + str4+str5;
 	document.getElementById('tForm').innerHTML=combine;
 }
