@@ -42,9 +42,10 @@ function validateDate() {
     }
 
     else if (document.getElementById('ampm').options[document.getElementById('ampm').selectedIndex].text == "PM") {
-        if ((parseInt(document.forms[0]["time"].value) <= currentDate.getHours())||(parseInt(document.forms[0]["time"].value) {
+        if ((parseInt(document.forms[0]["time"].value) <= currentDate.getHours())||(parseInt(document.forms[0]["time"].value))) {
             alert("this time has passed");
             return false;
+        }
     }
 	else 
 		rc();
