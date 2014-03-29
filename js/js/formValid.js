@@ -1,8 +1,9 @@
 function validateForm() {
     if (document.forms[0].email)
         validateEmail();
-    if ((document.forms[0].months) && (document.forms[0].day))
+  //  if ((document.forms[0].months) && (document.forms[0].day))
         validateDate();
+    return false;
 
 }
 function validateEmail() {
@@ -47,7 +48,7 @@ function validateDate() {
             return false;
         }
     }
-	else 
+	//else
 		rc();
 }
 function rc() {
