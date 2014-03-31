@@ -28,8 +28,8 @@
 				</div>
 				<div class="row">
 					<label>Password</label>
-					<input type="password" name="pswrd">
-				</div>
+                    <input type="password" name="pswrd" pattern="^.{6,20}[^a-zA-Z0-9].{6,20}$">
+                </div>
 				<div class="buttonarea">
 					<input type="submit"  value="Login" />
 					<input type="reset" value="Cancel" onClick="return confirm('Are you sure?');"/>
