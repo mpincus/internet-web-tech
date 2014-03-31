@@ -1,8 +1,8 @@
 function validateForm() {
     if (document.forms[0].email)
         validateEmail();
-  //  if ((document.forms[0].months) && (document.forms[0].day))
-        validateDate();
+    //  if ((document.forms[0].months) && (document.forms[0].day))
+    validateDate();
     return false;
 
 }
@@ -19,37 +19,56 @@ function validateDate() {
     var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
     var currentDate = new Date();
     var inputMonth = 0;
-	    for (var i = 0; i < 12; i++) {
+    for (var i = 0; i < 12; i++) {
         if (document.forms[0]["months"].value == monthNames[i])
             inputMonth = i;
     }
-    if (document.forms[0]["year"].value < currentDate.getFullYear()) {
+    /*this year or later*/
+    if (document.forms[0]["year"].value >= currentDate.getFullYear()) {
+        /*this month*/
+        if ((document.forms[0]["year"].value == currentDate.getFullYear()) && (inputMonth == currentDate.getMonth())) {
+            /*this day or later*/
+            if ((parseInt(document.forms[0]["day"].value) >= currentDate.getDate())) {
+                /*am selected*/
+                if (document.getElementById('ampm').options[document.getElementById('ampm').selectedIndex].text == "AM") {
+                    /*if too early*/
+                    if ((parseInt(document.forms[0]["time"].value) <= currentDate.getHours())) {
+                        alert("this time has passed");
+                        return false;
+                    }
+                    else if ((parseInt(document.forms[0]["time"].value) > 12)) {
+                        alert("select pm");
+                        return false;
+                    }
+                }
+                else {
+                    if ((parseInt(document.forms[0]["time"].value) <= currentDate.getHours() - 12)) {
+                        alert("this time has passed");
+                        return false;
+                    }
+                    else if ((parseInt(document.forms[0]["time"].value)) > 12) {
+                        alert("fuck off dont break my code")
+                    }
+                }
+            }
+            else {
+                alert("this day has passed");
+                return false;
+            }
+        }
+        else if ((document.forms[0]["year"].value == currentDate.getFullYear()) && (inputMonth > currentDate.getMonth())) {
+            //youre good here
+        }
+        else if ((document.forms[0]["year"].value == currentDate.getFullYear()) && (inputMonth < currentDate.getMonth())) {
+            alert("this month has passed");
+            return false;
+        }
+        rc();
+    }
+    else {
         alert("this year has passed");
         return false;
     }
-    else if ((document.forms[0]["year"].value == currentDate.getFullYear()) && (inputMonth < currentDate.getMonth())) {
-        alert("This month has passed");
-        return false;
-    }
-    else if ((inputMonth == currentDate.getMonth()) && (parseInt(document.forms[0]["day"].value) < currentDate.getDate())) {
-        alert("This day has passed");
-        return false;
-    }
-    else if (document.getElementById('ampm').options[document.getElementById('ampm').selectedIndex].text == "AM") {
-        if ((parseInt(document.forms[0]["time"].value) <= currentDate.getHours())||(parseInt(document.forms[0]["time"].value) > 12)) {
-            alert("this time has passed");
-            return false;
-        }
-    }
-
-    else if (document.getElementById('ampm').options[document.getElementById('ampm').selectedIndex].text == "PM") {
-        if ((parseInt(document.forms[0]["time"].value) <= currentDate.getHours())||(parseInt(document.forms[0]["time"].value))) {
-            alert("this time has passed");
-            return false;
-        }
-    }
-	//else
-		rc();
 }
 function rc() {
     bak = document.getElementById('rForm').innerHTML;
@@ -67,6 +86,7 @@ function rc() {
     document.getElementById('rForm').innerHTML = str;
 
 }
+
 function restore(bak) {
     document.getElementById('rForm').innerHTML = bak;
-} 
+}
