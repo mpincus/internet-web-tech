@@ -1,9 +1,9 @@
 function signupMsg() {
-    passCheck();
-    if (passCheck()) {
-        localStorage.setItem("username", document.getElementById('userid').value);
+    //passCheck();
+    //if (passCheck()) {
+    localStorage.setItem("username", document.getElementById('userid').value);
         alert('Welcome ' + localStorage.getItem("username"));
-    }
+    //}
 }
 function loggedInMsg() {
     if (localStorage.getItem('userid') != undefined) {
@@ -12,7 +12,7 @@ function loggedInMsg() {
     }
 }
 function passCheck() {
-    if (docuent.getElementById('cpswrd')) {
+    if (docuent.getElementById('cpswrd') != undefined) {
         if (docuement.getElementById('pswrd').value == document.getElementById('cpswrd').value) {
             return true;
         }
