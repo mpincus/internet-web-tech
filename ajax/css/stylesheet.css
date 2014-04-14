@@ -1,0 +1,171 @@
+/*External StyleSheet*/
+a:link {text-decoration: none;color:cyan}
+a:hover {text-decoration: underline;font-size: 100%; color:orange;}
+
+
+@media print{
+	img{display:none;}
+	body{background-color:white;}
+	ul{list-style-image:none;}
+	ol{list-style-image:none;}
+}
+
+
+fieldset {
+  border: 1px solid #CCA383;
+  width: 800px;
+  background: #000000;
+  display: block;
+  margin: 0 auto 25px;
+}
+.row{ font-family: "Lucida Console", Monaca, monospace; color: #00ff00; margin-bottom: 10px; }
+.row label { display:inline-block; text-align: left; width: 200px; }
+.row input, .row textarea, #months { display: inline-block; width: 582px; }
+.buttonarea { text-align: right; }
+.time input{width:450px;}
+iframe { 
+border-width: 0;
+width: 90%;
+height: 50px;
+display: block;
+margin:0 auto;
+border-radius:80%;
+}
+
+ul {color: red;}
+ul.liststuff {list-style-image: url("../img/chickenIcon.png");
+		margin-left:2cm;
+		 }
+ol {list-style-image: url("../img/chickenIcon2.png");}
+
+body {background-color: RGBA(0,0,0, .9);
+	 font-family: 'Berkshire Swash', cursive;;}
+
+p{font-family: 'Berkshire Swash', cursive;
+	color:#00FF00;
+	text-align:center;}
+p.copy{font-size:60%;}
+
+h1{font-family: 'Berkshire Swash', cursive;;
+	color:#00FF00;
+	text-align: center;
+	text-shadow: 5px 10px 7px green;
+}
+.quotes{font-family: 'Berkshire Swash', cursive;;
+	color:#00FF00;
+	text-align:center;
+	text-shadow: 5px 10px 7px green;}
+h2{font-family: 'Berkshire Swash', cursive;;
+	color:#00FF00;
+	text-align:center;
+	text-shadow: 5px 10px 7px green;}
+
+h4{font-family: 'Berkshire Swash', cursive;;
+	color:#00FF00;
+	text-align:center;}
+table{font-family: 'Berkshire Swash', cursive;;
+	color:#00FF00;
+	background-color:#000000;
+	text-align:center;
+	margin:auto;}
+
+fieldset legend {
+	background: #000000;
+	padding: 6px;
+	font-weight: bold;
+	color:#00FF00;
+}
+
+.checkbox{
+	color:#00ff00;
+	display:block;
+	margin:auto;
+	width:750px;
+	text-align:center;
+	/*float:center;*/
+	}
+.radio{
+	color:#00ff00;
+	display:block;
+	width:750px;
+	text-align:center;
+	float:center;
+	}
+.rating{text-align:center;}
+
+hr {width:82%; height:5px; color:red; background-color:orange; 
+    margin-left:7%; margin-right:7%; margin-top:1%; margin-bottom:1%} 
+#reservationsDisclaimer {
+    position: absolute;
+    left: 5%;
+    top: 70%;
+    height: 6em;
+    width: 12em;
+    overflow-y: scroll;
+    color: RGBA(100,100,100,.5);
+    font-family: "arial";  
+    font-size: 75%
+}
+#logo { width: 90px; height: 100px; background-image:url("../img/logo.png");float:left;background-repeat:no-repeat;}
+.top{position:absolute;left:4%;top:45%;width:100px;height:95px;background-image:url("../img/chickenIcon2.png");background-repeat:no-repeat;z-index:3;}
+.middle{position:absolute;left:5%;top:55%;width:100px;height:100px;background-image:url("../img/meatballs.png");background-repeat:no-repeat;z-index:2;}
+.bottom{position:absolute;top:40%;width:200px;height:200px;background-image:url("../img/plate.png");background-repeat:no-repeat;z-index:1;}
+
+#logo {
+position:relative;
+animation-name:myfirst;
+animation-duration:10s;
+animation-timing-function:linear;
+animation-delay:300s;
+animation-iteration-count:infinite;
+animation-direction:alternate;
+animation-play-state:running;
+/* Safari and Chrome: */
+-webkit-animation-name:myfirst;
+-webkit-animation-duration:.5s;
+-webkit-animation-timing-function:linear;
+-webkit-animation-delay:2s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+}
+@keyframes myfirst
+{
+0%   {background:red; left:0%; top:0%;}
+25%  {background:yellow; left:90%; top:0%;}
+50%  {background:blue; left:90%; top:80%;}
+75%  {background:green; left:0%; top:80%;}
+100% {background:red; left:0%; top:0%;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {background:red; left:0px; top:0px;}
+25%  {background:yellow; left:90%; top:0px;}
+50%  {background:blue; left:90%; top:80%;}
+75%  {background:green; left:0px; top:80%;}
+100% {background:red; left:0px; top:0px;}
+}
+#picture:hover {
+    -webkit-transition: -webkit-transform 5s;
+    transition: transform 5s;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    }
+#melting{
+	position:absolute;
+	left:40%;
+	top:70%;
+	
+}
+#melting img{
+      -webkit-transition: none 3s ease-in-out;
+    transition: opacity 3s ease-in-out;
+    transition-timing-function:linear;
+}
+#melting img.chik:hover{
+	opacity:0;
+}
+#userMsg p{
+	color:orange;
+	}

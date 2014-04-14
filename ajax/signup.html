@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--signup-->
+<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <title>signup</title>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <script src="js/signin.js"></script>
+</head>
+<body>
+<a href="index.html" id="logo"> </a>
+
+<h1>Welcome to Richard Teabag's House of Cocks: Family-Style Restaurant</h1>
+
+<h2>Meatballs for your mouth since 1995</h2>
+<iframe src="navi.html" target="_parent"></iframe>
+<h1>Signup Page</h1>
+<hr>
+<fieldset>
+    <legend>SignUp</legend>
+    <form name="register" id="register" onSubmit="return signupMsg();">
+        <div class="row">
+            <label>Username</label>
+            <input type="text" name="userid" id="userid" required="true"/>
+        </div>
+        <div class="row">
+            <label>Password</label>
+            <input type="password" name="pswrd" id="pswrd" required="true"
+                   pattern="(?=^.{6,20}$)(?=(?:.*?\d){2})(?=.*[a-z])(?=(?:.*?[A-Z]){2})(?=(?:.*?[!@#$%*()_+^&}{:;?.]){2})(?!.*\s)[0-9a-zA-Z!@#$%*()_+^&]*$"
+                   placeholder="6-20 characters. atleast 1 special, atleast 2 digit, atleast 2 uppercase"/>
+        </div>
+        <div class="row">
+            <label> Confirm Password</label>
+            <input type="password" name="cpswrd" id="cpswrd" required="true"
+                   pattern="(?=^.{6,20}$)(?=(?:.*?\d){2})(?=.*[a-z])(?=(?:.*?[A-Z]){2})(?=(?:.*?[!@#$%*()_+^&}{:;?.]){2})(?!.*\s)[0-9a-zA-Z!@#$%*()_+^&]*$"
+                   placeholder="6-20 characters. atleast 1 special, atleast 2 digit, atleast 2 uppercase"/>
+        </div>
+        <div class="row">
+            <label> Email</label>
+            <input type="email" name="email" required="true"/>
+        </div>
+        <div class="buttonarea">
+            <input type="submit" value="Register"/>
+            <input type="reset" value="Cancel" onClick="return confirm('Are you sure?');"/>
+        </div>
+    </form>
+</fieldset>
+</body>
+<footer>
+    <iframe src="navi.html" target="_parent"></iframe>
+    <p class="copy">&copy; copywrite</p>
+</footer>
+</html>
