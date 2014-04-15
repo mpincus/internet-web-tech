@@ -49,12 +49,12 @@ function orderConfirm(checked) {
     var str3 = "";
     var str4 = "";
     var tax = 1.00, deliv = 0, total = 0;
-    var delivYes="";
+    var delivYes = "";
 
     str4 = "<div class='row'><label>Name</label><input type='text'  disabled='disabled' style='background-color:#000000;' value='" + document.getElementById('name').value + "'/></div><br>" + "<div class='row'><label>Telephone Number</label><input type='text'  disabled='disabled' style='background-color:#000000;' value='" + document.getElementById('tel').value + "'/></div><br>";
-    if(document.getElementById('deliv').checked){
-        var str5="<div class='row'><label>Address</label><input type='text'  disabled='disabled' style='background-color:#000000;' value='" + document.getElementById('address').value + "'/></div><br>" + "<div class='row'><label>Town</label><input type='text'  disabled='disabled' style='background-color:#000000;' value='" + document.getElementById("town").value + "'/></div><br>";
-        str4=str4+str5;
+    if (document.getElementById('deliv').checked) {
+        var str5 = "<div class='row'><label>Address</label><input type='text'  disabled='disabled' style='background-color:#000000;' value='" + document.getElementById('address').value + "'/></div><br>" + "<div class='row'><label>Town</label><input type='text'  disabled='disabled' style='background-color:#000000;' value='" + document.getElementById("town").value + "'/></div><br>";
+        str4 = str4 + str5;
     }
     for (var i = 0; i < checked.length; i++) {
         str2 += "<div class='row'><label>" + checked[i].id + "</label><input type='text' style='background-color:#000000;' disabled='disabled' value='$" + localStorage.getItem(checked[i].id) + "'/></div><br>";
@@ -62,9 +62,9 @@ function orderConfirm(checked) {
     for (var i = 0; i < checked.length; i++) {
         total += parseFloat(localStorage.getItem(checked[i].id));
     }
-    if(document.getElementById('deliv').checked){
-        deliv=900.00;
-        delivYes= "<div class='row'><label>Delivary</label><input type='text'  disabled='disabled' style='background-color:#000000;' value='$" + deliv + "'/></div><br>";
+    if (document.getElementById('deliv').checked) {
+        deliv = 900.00;
+        delivYes = "<div class='row'><label>Delivary</label><input type='text'  disabled='disabled' style='background-color:#000000;' value='$" + deliv + "'/></div><br>";
 
     }
     total += (tax + deliv);
@@ -73,14 +73,14 @@ function orderConfirm(checked) {
     var combine = str + str2 + "<hr><br>" + str3 + "<hr><br>" + str4 + "<input type='button' id='okb' value = 'OK' onClick='return restore(bak)'/>";
     document.getElementById('tForm').innerHTML = combine;
 }
-function delivary(){
-    var bak2 ="";
-    if(document.getElementById('deliv').checked){
-        var temp='<div class="row"><label>Address:</label><input name="address" id="address" type="text" size="25" maxlength="30" required="true" /></div><div class="row"><label>Town:</label><input name="town" id="town" required="true" type="text" size="25" maxlength="30" required = "true" / ></div>';
-    document.getElementById('delivYes').innerHTML=temp;
+function delivary() {
+    var bak2 = "";
+    if (document.getElementById('deliv').checked) {
+        var temp = '<div class="row"><label>Address:</label><input name="address" id="address" type="text" size="25" maxlength="30" required="true" /></div><div class="row"><label>Town:</label><input name="town" id="town" required="true" type="text" size="25" maxlength="30" required = "true" / ></div>';
+        document.getElementById('delivYes').innerHTML = temp;
     }
     else
-        document.getElementById('delivYes').innerHTML=bak2;
+        document.getElementById('delivYes').innerHTML = bak2;
 }
 function restore(bak) {
     document.getElementById('tForm').innerHTML = bak;

@@ -1,124 +1,128 @@
 <!--reservation-->
 <!DOCTYPE html>
 <html>
-	<head>
-		<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
-		<meta charset="utf-8">
-		<title>Reservation</title>
-		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-		<div class="emailCheck">
-			<script src = "js/formValid.js"></script>
-		</div>
-	</head>
-	<body>
-                <a href="index.html" id="logo"> </a> 
-                <h1>Welcome to Richard Teabag's House of Cocks: Family-Style Restaurant</h1>
-                <h2>Meatballs for your mouth since 1995</h2>
-		<iframe src="navi.html" target="_parent"></iframe>
-		<h1>Reservations</h1>
-		<hr>		
-		<p>To place a reservation fill out the form below.</p>
-		<fieldset>
-			<legend>Reservation</legend>
-			<form id="rForm" method="post" action="/" autocomplete="on" onSubmit="return validateForm();">
-				<div class="row">
-					<label>Name:</label>
-					<input name="name" type="text" size="25" maxlength="30" id="username" placeholder="User Name" required="true">
-				</div>
-				<div class="row">
-					<label>Email:</label>
-					<input name="email" type="text" size="25" required="true" />
-				</div>
-				<div class="row">
-					<label>Comments:</label>
-					<textarea name="comments" rows="4" cols="36"></textarea>
-				</div>
-				<div class="row">
-					<label for="txtyear">Year:</label>
-					<input type ="text" id="year" placeholder="Select a year" required="true" />
-				</div>
-				<div class="row">
-					<label for="txtlist">Months:</label>
-				<!--	<input type="text" name="months" id="months" placeholder="Select a month" list="months" required="true" /> -->
-					<select id="months">
-						<option>January</option>
-						<option>February</option>
-						<option>March</option>
-						<option>April</option>
-						<option>May</option>
-						<option>June</option>
-						<option>July</option>
-						<option>August</option>
-						<option>September</option>
-						<option>October</option>
-						<option>November</option>
-						<option>December</option>
-					</select>
-				</div>
-				<div class="row">
-					<label for="txtnum">Days:</label>
-					<input type="text" name="day" id="day" placeholder="Select a day" list="day" required="true" />
-					<datalist id="day">
-						<option value="1">
-						<option value="2">
-						<option value="3">
-						<option value="4">
-						<option value="5">
-						<option value="6">
-						<option value="7">
-						<option value="8">
-						<option value="9">
-						<option value="10">
-						<option value="11">
-						<option value="12">
-						<option value="13">
-						<option value="14">
-						<option value="15">
-						<option value="16">
-						<option value="17">
-						<option value="18">
-						<option value="19">
-						<option value="20">
-						<option value="21">
-						<option value="22">
-						<option value="23">
-						<option value="24">
-						<option value="25">
-						<option value="26">
-						<option value="27">
-						<option value="28">
-						<option value="29">
-						<option value="30">
-						<option value="31">
-					</datalist>
-				</div>
-				<div class="row">
-					<div class="time">
-						<label for="txttime">Time:</label>
-						<input type ="text" name = "time" id="time" placeholder="Select a time" required="true" />
-					<select name = "ampm" id="ampm">
-						<option selected> AM</option>
-						<option>PM</option>
-					</select>
-					</div>
-				</div>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <title>Reservation</title>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <div class="emailCheck">
+        <script src="js/formValid.js"></script>
+    </div>
+</head>
+<body>
+<a href="index.html" id="logo"> </a>
 
-				<div class="row">
-					<label for="tele">Telephone Number:</label>
-					<input type='tel' pattern='[\(]??\d{3}[\)]??\d{3}[\-]??\s*\d{4}' placeholder="Phone Number (Format: (999)999-9999)"> 
-				</div>
-				<div class="buttonarea">
-					<input type="submit" value="Submit" />
-					<input type="reset" value="Clear" onClick="return confirm('Are you sure?');" />
-				</div>
-				<div id="reservationsDisclaimer"> ffms dlkmsdf wepof w afafmposd poef spmas f mklfwe iasdodfij fsmfdose asmdfksl
-				</div>
-			</form>
-		</fieldset>
-		</body>
-	<footer>
-		<iframe src="navi.html" target="_parent"></iframe>
-		<p class="copy">&copy; copywrite</p>
+<h1>Welcome to Richard Teabag's House of Cocks: Family-Style Restaurant</h1>
 
-	</footer>
+<h2>Meatballs for your mouth since 1995</h2>
+<iframe src="navi.html" target="_parent"></iframe>
+<h1>Reservations</h1>
+<hr>
+<p>To place a reservation fill out the form below.</p>
+<fieldset>
+    <legend>Reservation</legend>
+    <form id="rForm" method="post" action="/" autocomplete="on" onSubmit="return validateForm();">
+        <div class="row">
+            <label>Name:</label>
+            <input name="name" type="text" size="25" maxlength="30" id="username" placeholder="User Name"
+                   required="true">
+        </div>
+        <div class="row">
+            <label>Email:</label>
+            <input name="email" type="text" size="25" required="true"/>
+        </div>
+        <div class="row">
+            <label>Comments:</label>
+            <textarea name="comments" rows="4" cols="36"></textarea>
+        </div>
+        <div class="row">
+            <label for="txtyear">Year:</label>
+            <input type="text" id="year" placeholder="Select a year" required="true"/>
+        </div>
+        <div class="row">
+            <label for="txtlist">Months:</label>
+            <!--	<input type="text" name="months" id="months" placeholder="Select a month" list="months" required="true" /> -->
+            <select id="months">
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="txtnum">Days:</label>
+            <input type="text" name="day" id="day" placeholder="Select a day" list="day" required="true"/>
+            <datalist id="day">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+                <option value="5">
+                <option value="6">
+                <option value="7">
+                <option value="8">
+                <option value="9">
+                <option value="10">
+                <option value="11">
+                <option value="12">
+                <option value="13">
+                <option value="14">
+                <option value="15">
+                <option value="16">
+                <option value="17">
+                <option value="18">
+                <option value="19">
+                <option value="20">
+                <option value="21">
+                <option value="22">
+                <option value="23">
+                <option value="24">
+                <option value="25">
+                <option value="26">
+                <option value="27">
+                <option value="28">
+                <option value="29">
+                <option value="30">
+                <option value="31">
+            </datalist>
+        </div>
+        <div class="row">
+            <div class="time">
+                <label for="txttime">Time:</label>
+                <input type="text" name="time" id="time" placeholder="Select a time" required="true"/>
+                <select name="ampm" id="ampm">
+                    <option selected> AM</option>
+                    <option>PM</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="tele">Telephone Number:</label>
+            <input type='tel' pattern='[\(]??\d{3}[\)]??\d{3}[\-]??\s*\d{4}'
+                   placeholder="Phone Number (Format: (999)999-9999)">
+        </div>
+        <div class="buttonarea">
+            <input type="submit" value="Submit"/>
+            <input type="reset" value="Clear" onClick="return confirm('Are you sure?');"/>
+        </div>
+        <div id="reservationsDisclaimer"> ffms dlkmsdf wepof w afafmposd poef spmas f mklfwe iasdodfij fsmfdose asmdfksl
+        </div>
+    </form>
+</fieldset>
+</body>
+<footer>
+    <iframe src="navi.html" target="_parent"></iframe>
+    <p class="copy">&copy; copywrite</p>
+
+</footer>
 </html>

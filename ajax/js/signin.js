@@ -2,7 +2,7 @@ function signupMsg() {
     //passCheck();
     //if (passCheck()) {
     localStorage.setItem("username", document.getElementById('userid').value);
-        alert('Welcome ' + localStorage.getItem("username"));
+    alert('Welcome ' + localStorage.getItem("username"));
     //}
 }
 function loggedInMsg() {

@@ -1,0 +1,15 @@
+<cocksoup>
+    <p>
+        <name>Cock Soup</name>
+        <stuff>
+            <ul class="xmlstuff">
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+            </ul>
+        </stuff>
+    </p>
+</cocksoup>
