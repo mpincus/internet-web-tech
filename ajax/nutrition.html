@@ -33,16 +33,29 @@
 <fieldset>
     <legend>Nutrition</legend>
     <form id="tForm" method="post" autocomplete="on" onSubmit="return getInfo();">
-        <input type='text' id='dish' list='dishes' placeholder='select a dish'/>
+       <!-- <input type='text' id='dish' list='dishes' placeholder='select a dish'/>
         <datalist id='dishes'>
             <option value='sweaty balls'> Sweaty Balls</option>
-            <option value='pene con bolas'> pene con bolas</option>
+            <option value='pene con bolas'>pene con bolas</option>
             <option value='cock soup'> cock soup</option>
             <option value='cock meat'> cockmeat sandwich</option>
             <option value='choco balls'> chef's chocolate salty balls</option>
             <option value='linux'> linux cheese</option>
         </datalist>
-
+-->
+        <div class="row">
+            <label for="txtlist">Dishes:</label>
+            <!--	<input type="text" name="months" id="months" placeholder="Select a month" list="months" required="true" /> -->
+            <select id="dish" onchange="getInfo()">
+                <option selected="selected">--Select Dish--</option>
+                <option>sweaty balls</option>
+                <option>pene con bolas</option>
+                <option>cock soup</option>
+                <option>cock meat</option>
+                <option>choco balls</option>
+                <option>linux</option>
+            </select>
+        </div>
         <div id="contentArea">
 
             <div id="name"></div>
@@ -50,11 +63,6 @@
             <div id="b"></div>
             <div id="c"></div>
             <div id="d"></div>
-        </div>
-
-        <div class="buttonarea">
-            <input type="submit" value="Submit"/>
-            <input type="reset" value="Clear" onClick="return confirm('Are you sure?');"/>
         </div>
     </form>
 </fieldset>
