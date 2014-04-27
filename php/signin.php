@@ -69,7 +69,7 @@ sec_session_start();
 		<div class='row'>
 		            <label>Password:</label> <input type="password" 
                              name="password" 
-                             id="password" pattern="^(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?=.*[a-z])(?=.*[A-Z])(?i-msnx:(?!.*pass|.*password|.*word|.*god|.*\s))(?!^.*\n).*$" />
+                             id="password" />
 							 </div>
         <div class="buttonarea">
             <input type="submit" value="Login" onclick="formhash(this.form, this.form.password);"/>
